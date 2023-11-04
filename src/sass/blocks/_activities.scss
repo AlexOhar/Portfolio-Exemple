@@ -1,0 +1,45 @@
+.activities {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 20px;
+    &__item {
+        margin-bottom: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    &__logo {
+        grid-column: 1/2;
+        position: relative;
+        padding: 15px 0 0 15px;
+        @include before_circle;
+        &:before {
+            z-index: 0;
+            top: 0;
+            left: 28%;
+            
+        }
+        img {
+            position: relative;
+            display: block;
+            margin: 0 auto;
+            width: 25px;
+            height: 25px;
+            
+        }
+    }
+    &__block {
+        grid-column: 2/5;
+        max-width: 200px;
+    }
+    &__title {
+        line-height: 21px;
+    }
+    &__descr {
+        margin-top: 6px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+    }
+}

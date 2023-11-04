@@ -1,0 +1,72 @@
+.skills {
+    width: 100%;
+    padding: 60px 0;
+    background-color: $bg-color;
+    span {
+        display: block;
+        margin: 0 auto;
+        margin-top: 25px;
+        width: 38px;
+        height: 3px;
+        border-radius: 20px;
+        background-color: $main-color;
+        transition: all 3s linear;
+    }
+    &__wrapper {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, minmax(270px, auto));
+        grid-auto-rows: 270px;
+        gap: 13px;
+    }
+    &__item {
+        padding: 30px 30px;
+        border: 1px solid  #fff;
+    }
+    &__name {
+        margin-top: 10px;
+    }
+    &__descr {
+        margin-top: 5px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    &__percentages {
+        margin-top: 120px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 45px 30px;
+        &-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-name {
+            position: relative;
+            z-index: 1;
+            padding-left: 13px;
+            @include before_circle;
+            &:before {
+                content: '';
+                top: -12px;
+                left: 0px;
+            }
+        }
+        &-scaleTotal {
+            position: relative;
+            margin-top: 27px;
+            width: 100%;
+            height: 14px;
+            background: #E8E4DE;
+            border-radius: 4px;
+        }
+        &-scale {
+            position: absolute;
+            height: 14px;
+            background: $main-color;
+            border-radius: 4px;
+        }
+    }
+}
